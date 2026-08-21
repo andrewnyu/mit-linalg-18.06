@@ -42,6 +42,17 @@ The course goals are to use matrices and understand them. The syllabus highlight
 - Exams: three one-hour exams and a final exam.
 - Calculators and notes are not permitted during exams.
 
+Study breakpoints for the local Fall 2022 problem sets in `ps/`:
+
+| Study block | Stop after | Pset coverage | Main exam focus |
+| --- | --- | --- | --- |
+| Exam 1 | Problem Set 4 | Psets 1-4 | Matrix operations, solving `Ax = b`, elimination, triangular systems, `LU` and `PA = LU`, inverses, singular matrices, rank, subspaces, nullspaces, column spaces, bases, dimensions, complete solutions, transposes, dot products, orthogonality, and the four fundamental subspaces. |
+| Exam 2 | Problem Set 8 | Psets 5-8, plus Exam 1 material | Orthogonality-heavy block: orthogonal subspaces and complements, projections, least squares, orthonormal bases, Gram-Schmidt, `QR`, orthogonal functions, the SVD, matrix-calculus topics, and determinant properties. Eigenvalue problems start after this cutoff. |
+| Exam 3 | Problem Set 13 | Psets 9-13, plus earlier material | Eigenproblem block: determinants, trace, eigenvalues and eigenvectors, diagonalization, similar matrices, matrix powers, recurrences, Markov matrices, linear ODEs, matrix exponentials, complex matrices and adjoints, symmetric/Hermitian matrices, positive definiteness, SVD connections, and defective matrices. |
+| Final exam | Problem Set 13 | All psets | Cumulative review of all three blocks. |
+
+For a practical self-study rhythm: finish the listed psets for a block, take that exam, then move on to the next block.
+
 Grading:
 
 | Activity | Percentage |

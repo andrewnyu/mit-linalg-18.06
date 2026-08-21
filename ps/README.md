@@ -11,9 +11,10 @@ This folder contains the 13 Fall 2022 problem sets:
 
 - `pset1.ipynb` ... `pset13.ipynb`: Python 3 Jupyter notebooks converted from the HTML.
 - `raw-html/pset1.html` ... `raw-html/pset13.html`: original MIT HTML notebook exports.
+- `raw-ipynb/pset1.ipynb` ... `raw-ipynb/pset13.ipynb`: clean generated Python/NumPy notebook conversions.
 - `requirements.txt`: Python packages used by the converted starter cells.
 
-The original course starter code was written in Julia. Simple starter cells were converted to Python/NumPy where practical. Julia cells that were too specific for a reliable mechanical conversion were kept as commented reference code with a Python TODO cell.
+The original course starter code was written in Julia. Simple starter cells were converted to Python/NumPy where practical. Julia cells that were too specific for a reliable mechanical conversion were kept as commented reference code with a Python TODO cell. Use the notebooks directly in `ps/` for active work, and `raw-ipynb/` as clean regenerated references.
 
 ## Problem Set Files
 

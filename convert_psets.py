@@ -8,6 +8,7 @@ import re
 
 ROOT = Path("ps")
 HTML_ROOT = ROOT / "raw-html"
+NOTEBOOK_ROOT = ROOT / "raw-ipynb"
 
 
 class CellParser(HTMLParser):
@@ -89,7 +90,7 @@ class CellParser(HTMLParser):
         if self._capture_pre:
             self._pre_chunks.append(unescape(text))
         elif self._capture_md:
-            self._md_chunks.append(text)
+            self._md_chunks.append("&" if name == "amp" else text)
 
     def handle_charref(self, name):
         text = f"&#{name};"
@@ -231,12 +232,13 @@ def nb(cells, title, source_url):
 
 
 def main():
+    NOTEBOOK_ROOT.mkdir(exist_ok=True)
     for i in range(1, 14):
         html_path = HTML_ROOT / f"pset{i}.html"
         parser = CellParser()
         parser.feed(html_path.read_text(encoding="utf-8"))
         notebook = nb(parser.cells, f"18.06 Pset {i}", f"https://web.mit.edu/18.06/www/Fall2022/pset{i}.html")
-        out = ROOT / f"pset{i}.ipynb"
+        out = NOTEBOOK_ROOT / f"pset{i}.ipynb"
         out.write_text(json.dumps(notebook, ensure_ascii=False, indent=1), encoding="utf-8")
         code_count = sum(1 for typ, _ in parser.cells if typ == "code")
         md_count = sum(1 for typ, _ in parser.cells if typ == "markdown")
